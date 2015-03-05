@@ -86,4 +86,20 @@ describe('counting', function () {
 
   });
 
+
+  it('should count correctly with garbage characters', function () {
+
+    var result = counter('_*peut--être//');
+    assert.equal(result.count, 2);
+
+    assert.equal(result.words[0].value, 'peut');
+    assert.equal(result.words[0].start, 2);
+    assert.equal(result.words[0].end, 5);
+
+    assert.equal(result.words[1].value, 'être');
+    assert.equal(result.words[1].start, 8);
+    assert.equal(result.words[1].end, 11);
+
+  });
+
 });
