@@ -118,4 +118,15 @@ describe('counting', function () {
 
   });
 
+
+  it('should count correctly when trimming', function () {
+
+    var result = counter("'''test---");
+    assert.equal(result.count, 1);
+
+    assert.equal(result.words[0].value, 'test');
+    assert.equal(result.words[0].start, 3);
+    assert.equal(result.words[0].end, 6);
+
+  });
 });
