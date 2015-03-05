@@ -23,11 +23,6 @@
          { value: 'me', start: 52, end: 53 },
          { value: 'voir', start: 55, end: 58 } ] }
 
-## Build for browser
-
-    browserify index.js -o dist/word-counter-fr.js -s countWords
-
-
 ## Rules
 
 TODO
