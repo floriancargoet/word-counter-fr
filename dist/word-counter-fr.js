@@ -84,7 +84,7 @@ Token.prototype.makeWord = function (text, start, end) {
   };
 };
 
-var separatorRegex = /[\s.,;:!?\n\/\\_*+=()\[\]{}]/;
+var separatorRegex = /[\s.,;:!?\n\/\\_*+=()\[\]{}"…“”‘„“«»‹›<>]/;
 Token.fromString = function (string) {
   var tokens = [];
   var currentToken;

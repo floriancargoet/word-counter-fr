@@ -102,4 +102,20 @@ describe('counting', function () {
 
   });
 
+
+  it('should count correctly with quotation marks', function () {
+
+    var result = counter('"j\'ai"');
+    assert.equal(result.count, 2);
+
+    assert.equal(result.words[0].value, 'j');
+    assert.equal(result.words[0].start, 1);
+    assert.equal(result.words[0].end, 1);
+
+    assert.equal(result.words[1].value, 'ai');
+    assert.equal(result.words[1].start, 3);
+    assert.equal(result.words[1].end, 4);
+
+  });
+
 });
